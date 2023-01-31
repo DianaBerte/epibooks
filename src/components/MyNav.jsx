@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 
-const MyNav = (props) => {
+const MyNav = () => {
   return (
     <Navbar bg="dark" expand="md" variant="dark" >
       <Container>

@@ -1,7 +1,7 @@
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import { Container } from 'react-bootstrap';
 
-const Welcome = (props) => {
+const Welcome = () => {
 return (
 <Jumbotron fluid>
   <Container>
