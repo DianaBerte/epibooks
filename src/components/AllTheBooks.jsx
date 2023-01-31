@@ -13,10 +13,10 @@ class AllTheBooks extends Component {
                     
                         {items.map((books) => {
                             return (
-                                <Col className="mb-4">
+                                <Col key={books.asin} className="mb-4">
                                 <Card style={{width: '12rem'}}>
                                 <Card.Img
-                                key={books.asin}
+                                
                                 className="d-block w-100"
                                 src={books.img}
                                 alt="First image"/>
