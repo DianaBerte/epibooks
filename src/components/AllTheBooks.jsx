@@ -9,21 +9,23 @@ class AllTheBooks extends Component {
     render() {
         return (            
             <Container>
-            <Row>
-                <Col>
-                    <Card style={{width: '12rem'}}>
+            <Row className="justify-content-center">
+                    
                         {items.map((books) => {
                             return (
+                                <Col>
+                                <Card style={{width: '12rem'}}>
                                 <Card.Img
                                 key={books.id}
                                 className="d-block w-100"
                                 src={books.img}
                                 alt="First image"/>
+                                </Card>
+                                </Col>
                             )
                         })}
                         
-                    </Card>
-                </Col>
+                
             </Row>
             </Container>
         )
