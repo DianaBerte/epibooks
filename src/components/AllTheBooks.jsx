@@ -1,20 +1,28 @@
-import { Container, Row, Col, } from "react-bootstrap";
+import { Component } from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+// import items from "../Books/fantasy.json";
 
-
-const AllTheBooks = (props) => {
-    return (
-<Container>
-  <Row>
-    <Col>1 of 2</Col>
-    <Col>2 of 2</Col>
-  </Row>
-  <Row>
-    <Col>1 of 3</Col>
-    <Col>2 of 3</Col>
-    <Col>3 of 3</Col>
-  </Row>
-</Container>
-    )
+class AllTheBooks extends Component {
+    state = {
+        selectedBook: null,
+    }
+    render() {
+        return (            
+            <Container>
+            <Row>
+                <Col><Card >
+            <Card.Img variant="top" src="holder.js/100px180" />
+             </Card></Col>
+                <Col><Card >
+            <Card.Img variant="top" src="holder.js/100px180" />
+             </Card></Col>
+                <Col><Card >
+            <Card.Img variant="top" src="holder.js/100px180" />
+             </Card></Col>
+            </Row>
+            </Container>
+        )
+    }
 }
 
 export default AllTheBooks
