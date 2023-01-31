@@ -9,7 +9,7 @@ class AllTheBooks extends Component {
     render() {
         return (            
             <Container>
-            <Row className="justify-content-center">
+            <Row md={2} lg={3} xl={4} className="mb-4 justify-content-center">
                     
                         {items.map((books) => {
                             return (
