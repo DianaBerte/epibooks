@@ -11,12 +11,12 @@ class AllTheBooks extends Component {
             <Container>
             <Row>
                 <Col>
-                    <Card >
+                    <Card style={{width: '12rem'}}>
                         {items.map((books) => {
                             return (
                                 <Card.Img
                                 key={books.id}
-                                className="d-block w-10"
+                                className="d-block w-100"
                                 src={books.img}
                                 alt="First image"/>
                             )
