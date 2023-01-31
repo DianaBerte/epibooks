@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-// import items from "../Books/fantasy.json";
+import items from "../Books/fantasy.json";
 
 class AllTheBooks extends Component {
     state = {
@@ -10,15 +10,20 @@ class AllTheBooks extends Component {
         return (            
             <Container>
             <Row>
-                <Col><Card >
-            <Card.Img variant="top" src="holder.js/100px180" />
-             </Card></Col>
-                <Col><Card >
-            <Card.Img variant="top" src="holder.js/100px180" />
-             </Card></Col>
-                <Col><Card >
-            <Card.Img variant="top" src="holder.js/100px180" />
-             </Card></Col>
+                <Col>
+                    <Card >
+                        {items.map((books) => {
+                            return (
+                                <Card.Img
+                                key={books.id}
+                                className="d-block w-100"
+                                src={books.image}
+                                alt="First image"/>
+                            )
+                        })}
+                        
+                    </Card>
+                </Col>
             </Row>
             </Container>
         )
