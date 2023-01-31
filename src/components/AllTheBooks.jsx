@@ -16,8 +16,8 @@ class AllTheBooks extends Component {
                             return (
                                 <Card.Img
                                 key={books.id}
-                                className="d-block w-100"
-                                src={books.image}
+                                className="d-block w-10"
+                                src={books.img}
                                 alt="First image"/>
                             )
                         })}
