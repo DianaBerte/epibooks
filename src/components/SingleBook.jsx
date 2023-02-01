@@ -10,7 +10,7 @@ const SingleBook = (props) => {
         src={props.book.img}
         alt="First image"/>
         <Card.Body className="d-flex flex-column">
-            <Card.Title><p>{props.book.title}</p></Card.Title>
+            <Card.Title><h6>{props.book.title}</h6></Card.Title>
         </Card.Body>
         </Card>
         </div>
