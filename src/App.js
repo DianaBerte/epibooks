@@ -10,7 +10,7 @@ function App() {
     <div>
       <MyNav />
       <Welcome />
-      <AllTheBooks />
+      <AllTheBooks SingleBook={SingleBook} />
       <MyFooter />
     </div>
   );

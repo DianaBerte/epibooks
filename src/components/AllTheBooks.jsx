@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import items from "../Books/fantasy.json";
+import SingleBook from "./SingleBook";
 
 class AllTheBooks extends Component {
     state = {
@@ -10,22 +11,12 @@ class AllTheBooks extends Component {
         return (            
             <Container>
             <Row md={2} lg={3} xl={4} className=" justify-content-center">
-                    
-                        {items.map((books) => {
-                            return (
-                                <Col key={books.asin} className="mb-4">
-                                <Card style={{width: '12rem'}}>
-                                <Card.Img
-                                
-                                className="d-block w-100"
-                                src={books.img}
-                                alt="First image"/>
-                                </Card>
-                                </Col>
-                            )
-                        })}
-                        
-                
+                 {items.map((book) => {
+                        return (
+                           <Col key={book.asin} className="mb-4">
+                                <SingleBook book={book}/>
+                            </Col>)
+            })}               
             </Row>
             </Container>
         )
