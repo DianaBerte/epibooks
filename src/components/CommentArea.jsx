@@ -1,5 +1,7 @@
 import { Component } from "react";
 import { Container, ListGroup } from "react-bootstrap";
+import CommentsList from "./CommentsList";
+import AddComment from "./AddComment"
 
 class CommentArea extends Component {
     state = {
@@ -44,6 +46,12 @@ class CommentArea extends Component {
                     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
                     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                 </ListGroup>
+                {/* <h6>Book Reviews:</h6>
+                     <ListGroup>
+                         <CommentsList data="this.state.data">Lorem, ipsum dolor.</CommentsList>
+                    </ListGroup>
+                <h6>Add a comment:</h6>
+                    <AddComment /> */}
             </Container>
         )
     }
