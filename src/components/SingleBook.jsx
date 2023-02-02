@@ -6,6 +6,7 @@ import CommentArea from "./CommentArea";
 class SingleBook extends Component {
     state = {  
         selected: false,
+        id: "",
     }
 
     render() {
@@ -21,7 +22,7 @@ class SingleBook extends Component {
         <Card.Body className="d-flex flex-column">
             <Card.Title><h6>{this.props.book.title}</h6></Card.Title>
         </Card.Body>
-        { this.state.selected && <CommentArea /> }
+        { this.state.selected && <CommentArea asin={this.props.book.asin} /> }
         </Card>
         </div>
     )

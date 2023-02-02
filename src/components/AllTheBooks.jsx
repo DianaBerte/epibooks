@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import items from "../Books/fantasy.json";
+// import items from "../Books/fantasy.json";
 import SingleBook from "./SingleBook";
 
 class AllTheBooks extends Component {
@@ -11,7 +11,7 @@ class AllTheBooks extends Component {
         return (            
             <Container>
             <Row md={2} lg={3} xl={4} className=" justify-content-center">
-                 {items.map((book) => {
+                 {this.props.SingleBook.map((book) => {
                         return (
                            <Col key={book.asin} className="mb-4">
                                 <SingleBook book={book}/>
