@@ -11,7 +11,6 @@ class SingleBook extends Component {
     render() {
     return (
         <div>
-        {this.state.selected && ( CommentArea.style.display === "none" )}
         <Card onClick={() => this.setState({ selected: !this.state.selected  }) }
         style={{ border: this.state.selected ? '5px solid green' : 'none' }}
         >
@@ -22,8 +21,8 @@ class SingleBook extends Component {
         <Card.Body className="d-flex flex-column">
             <Card.Title><h6>{this.props.book.title}</h6></Card.Title>
         </Card.Body>
+        { this.state.selected && <CommentArea /> }
         </Card>
-        <CommentArea />
         </div>
     )
 }
