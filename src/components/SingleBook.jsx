@@ -4,17 +4,14 @@ import CommentArea from "./CommentArea";
 // import props from "../Books/fantasy.json";
 
 class SingleBook extends Component {
-    state = {
-        
+    state = {  
         selected: false,
     }
-
-
-  
 
     render() {
     return (
         <div>
+        {this.state.selected && ( CommentArea.style.display === "none" )}
         <Card onClick={() => this.setState({ selected: !this.state.selected  }) }
         style={{ border: this.state.selected ? '5px solid green' : 'none' }}
         >
@@ -26,6 +23,7 @@ class SingleBook extends Component {
             <Card.Title><h6>{this.props.book.title}</h6></Card.Title>
         </Card.Body>
         </Card>
+        <CommentArea />
         </div>
     )
 }
