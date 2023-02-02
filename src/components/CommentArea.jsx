@@ -15,12 +15,11 @@ class CommentArea extends Component {
             }
             } 
             )
-            console.log(response)
             if (response.ok) {
-                let data = await response.json()
-                console.log(data)
+                let data = await response.json();
+                console.log(data);
                 this.setState({
-                    comments: data
+                    comments: data,
                 })
             } else {
                 alert("error");
@@ -30,9 +29,9 @@ class CommentArea extends Component {
         }
     }
     
-    // componentDidMount() {
-    //     this.fetchComments()
-    // }
+    componentDidMount() {
+        this.fetchComments();
+    }
 
     render() {
         return (
