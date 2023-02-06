@@ -4,9 +4,11 @@ import { Container, ListGroup } from "react-bootstrap";
 // import AddComment from "./AddComment"
 
 class CommentArea extends Component {
-    state = {
-        comments: [],
-      }
+    // state = {
+    //     comments: [],
+    //   }
+
+    
 
       fetchComments = async () => {
         try {
@@ -19,12 +21,12 @@ class CommentArea extends Component {
             )
             if (response.ok) {
                 let data = await response.json();
-                console.log(data);
+                // console.log(data);
                 this.setState({
                     comments: data,
                 })
             } else {
-                alert("error");
+                alert("Oh no, you have an error");
             }
         } catch (error) {
             console.log(error)
@@ -43,7 +45,7 @@ class CommentArea extends Component {
             <Container>
                 <ListGroup>
                     <h6>Book Reviews:</h6>
-                    <ListGroup.Item data={this.state.data}>Lorem</ListGroup.Item>
+                    <ListGroup.Item>{}</ListGroup.Item>
                     <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
                     <ListGroup.Item>Morbi leo risus</ListGroup.Item>
                     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>

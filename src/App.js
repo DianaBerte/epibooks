@@ -12,6 +12,7 @@ import { Col } from "react-bootstrap";
 class App extends Component {
   state = {
     selectedBook: undefined,
+    comments: [],
   };
 
   changeAppState = (bookClicked) =>

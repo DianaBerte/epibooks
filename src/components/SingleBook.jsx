@@ -12,7 +12,8 @@ class SingleBook extends Component {
     render() {
     return (
         <div>
-        <Card onClick={() => this.setState({ selected: !this.state.selected  }) }
+        <Card onClick={(e) => this.props.changeAppStateFromApp} className={this.checkSelected}
+        // onClick={() => this.setState({ selected: !this.state.selected  }) }
         style={{ border: this.state.selected ? '5px solid green' : 'none' }}
         >
         <Card.Img
@@ -23,6 +24,7 @@ class SingleBook extends Component {
             <Card.Title><h6>{this.props.book.title}</h6></Card.Title>
         </Card.Body>
         { this.state.selected && <CommentArea asin={this.props.book.asin} /> }
+        <p>Local state is {this.props.selectedValueFromApp || "undefined"}</p>
         </Card>
         </div>
     )

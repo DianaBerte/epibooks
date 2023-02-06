@@ -4,9 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 
 class AllTheBooks extends Component {
-    state = {
-        selectedBook: null,
-    }
+    // state = {
+    //     selectedBook: null,
+    // }
+
+    checkSelected = (value) =>
+    value === this.props.selectedValueFromApp ? "selected" : ""
+
     render() {
         return (
             <>
