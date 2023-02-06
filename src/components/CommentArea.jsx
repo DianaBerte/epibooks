@@ -1,11 +1,14 @@
 import { Component } from "react";
 import { Container, ListGroup } from "react-bootstrap";
-// import CommentsList from "./CommentsList";
+import AddComment from "./AddComment";
+import CommentsList from "./CommentsList";
 // import AddComment from "./AddComment"
 
 class CommentArea extends Component {
     // state = {
     //     comments: [],
+    //     isLoading: true,
+    //     isError: false,
     //   }
 
     
@@ -20,16 +23,20 @@ class CommentArea extends Component {
             } 
             )
             if (response.ok) {
-                let data = await response.json();
+                let comments = await response.json();
                 // console.log(data);
                 this.setState({
-                    comments: data,
+                    comments: comments,
+                    isLoading: false,
+                    isError: false,
                 })
             } else {
                 alert("Oh no, you have an error");
+                this.setState({isLoading: false, isError: true})
             }
         } catch (error) {
             console.log(error)
+            this.setState({isLoading: false, isError: true})
         }
     }
     
@@ -44,12 +51,14 @@ class CommentArea extends Component {
             <br /> 
             <Container>
                 <ListGroup>
-                    <h6>Book Reviews:</h6>
+                    {/* <h6>Book Reviews:</h6> */}
                     <ListGroup.Item>{}</ListGroup.Item>
                     <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
                     <ListGroup.Item>Morbi leo risus</ListGroup.Item>
                     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
                     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                    <AddComment asin={this.props.asin} />
+                    <CommentsList commentsToShow={this.state.comments} />
                 </ListGroup>
                 {/* <h6>Book Reviews:</h6>
                      <ListGroup>
