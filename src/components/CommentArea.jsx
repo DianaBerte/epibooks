@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Container, ListGroup } from "react-bootstrap";
-import CommentsList from "./CommentsList";
-import AddComment from "./AddComment"
+// import CommentsList from "./CommentsList";
+// import AddComment from "./AddComment"
 
 class CommentArea extends Component {
     state = {
@@ -37,10 +37,13 @@ class CommentArea extends Component {
 
     render() {
         return (
+            <>
+            <h5 className= "d-flex justify-content-center">Comments:</h5>
+            <br /> 
             <Container>
                 <ListGroup>
                     <h6>Book Reviews:</h6>
-                    <ListGroup.Item data={this.state.data}>Lorem, ipsum dolor.</ListGroup.Item>
+                    <ListGroup.Item data={this.state.data}>Lorem</ListGroup.Item>
                     <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
                     <ListGroup.Item>Morbi leo risus</ListGroup.Item>
                     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
@@ -53,6 +56,7 @@ class CommentArea extends Component {
                 <h6>Add a comment:</h6>
                     <AddComment /> */}
             </Container>
+            </>
         )
     }
 }

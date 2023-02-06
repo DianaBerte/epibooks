@@ -8,7 +8,10 @@ class AllTheBooks extends Component {
         selectedBook: null,
     }
     render() {
-        return (            
+        return (
+            <>
+            <h5 className= "d-flex justify-content-center">All the Books:</h5>
+            <br />            
             <Container>
             <Row md={2} lg={3} xl={4} className=" justify-content-center">
                  {this.props.SingleBook.map((book) => {
@@ -19,6 +22,7 @@ class AllTheBooks extends Component {
             })}               
             </Row>
             </Container>
+            </>
         )
     }
 }
